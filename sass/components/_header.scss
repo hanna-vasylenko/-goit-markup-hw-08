@@ -1,0 +1,18 @@
+.header {
+  border: 1px solid #ececec;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+  &__nav {
+    display: flex;
+    align-items: baseline;
+  }
+  &__list {
+    display: flex;
+    align-items: baseline;
+  }
+}
