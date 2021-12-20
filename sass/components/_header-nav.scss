@@ -34,7 +34,14 @@
     }
   }
   &__list {
-    display: flex;
-    align-items: baseline;
+    display: none;
+    @include mq(tablet) {
+      display: flex;
+    }
+    @include mq(desktop) {
+      display: flex;
+      align-items: baseline;
+      margin-right: 84px;
+    }
   }
 }

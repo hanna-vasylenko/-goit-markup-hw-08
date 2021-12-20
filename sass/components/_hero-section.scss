@@ -26,16 +26,17 @@
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
+  max-width: 360px;
   margin: 0 auto;
   @include mq(desktop) {
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
+    max-width: 696px;
   }
 }
 
 .hero__button {
+  border: none;
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;

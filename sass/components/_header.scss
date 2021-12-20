@@ -1,23 +1,14 @@
 .header {
   border-bottom: 1px solid #ececec;
-  padding-top: 16px;
-  padding-bottom: 16px;
-
-  @include mq(tablet) {
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
-  @include mq(desktop) {
-    padding-top: 25px;
-    padding-bottom: 25px;
+  @include mq(mobile-only) {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   &__container {
     display: flex;
-    align-items: baseline;
+    align-items: center;
   }
   &__nav {
-    display: flex;
-    align-items: baseline;
     @include mq(mobile-only) {
       display: none;
     }
@@ -25,44 +16,6 @@
   &__list {
     display: flex;
     align-items: baseline;
-  }
-}
-
-.header-nav__list {
-  display: none;
-  @include mq(tablet) {
-    display: flex;
-  }
-  @include mq(desktop) {
-    display: flex;
-    align-items: baseline;
-    margin-right: 84px;
-  }
-}
-
-.contact-list {
-  margin-left: auto;
-  @include mq(mobile-only) {
-    display: none;
-  }
-
-  @include mq(desktop) {
-    display: flex;
-    align-items: center;
-  }
-  &__link {
-    @include mq(desktop) {
-      font-size: 14px;
-      line-height: 1.14;
-    }
-  }
-  &__icon {
-    fill: currentColor;
-    margin-right: 8px;
-
-    @include mq(desktop) {
-      margin-right: 10px;
-    }
   }
 }
 
@@ -82,20 +35,20 @@
   }
 }
 
-.menu-bth {
+.header-btn {
+  display: none;
   border: none;
   background-color: transparent;
   padding: 0;
   margin-left: auto;
-  display: none;
   @include mq(mobile-only) {
     display: block;
   }
 }
 
-.menu-btn-icon {
+.header-btn__icon {
   display: block;
-}
-.icon-close {
-  display: none;
+  &--close {
+    display: none;
+  }
 }
