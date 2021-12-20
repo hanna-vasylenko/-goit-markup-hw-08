@@ -25,11 +25,10 @@
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 480px) {
   .container {
     width: 480px;
   }
@@ -178,13 +177,13 @@ button {
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   margin-right: 93px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 768px) {
   .logo {
     margin-right: 88px;
   }
@@ -194,7 +193,18 @@ button {
   .logo {
     margin-right: 93px;
     font-size: 26px;
+    line-height: 1.19;
   }
+}
+
+@media (min-width: 768px) {
+  margin-right: 88px;
+}
+
+@media (min-width: 1200px) {
+  margin-right: 93px;
+  font-size: 26px;
+  line-height: 1.19;
 }
 
 .logo--dark {
@@ -342,6 +352,12 @@ button {
           align-items: baseline;
 }
 
+@media (max-width: 767.98px) {
+  .header__nav {
+    display: none;
+  }
+}
+
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,14 +392,12 @@ button {
 }
 
 .contact-list {
-  display: none;
+  margin-left: auto;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767.98px) {
   .contact-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
   }
 }
 
@@ -392,23 +406,73 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-list__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.contact-list__icon {
+  fill: currentColor;
+  margin-right: 8px;
+}
+
+@media (min-width: 1200px) {
+  .contact-list__icon {
+    margin-right: 10px;
+  }
+}
+
+.icon-mail {
+  width: 14px;
+  height: 10px;
+}
+
+@media (min-width: 1200px) {
+  .icon-mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.icon-tel {
+  width: 10px;
+  height: 14px;
+}
+
+@media (min-width: 1200px) {
+  .icon-tel {
+    height: 16px;
   }
 }
 
 .menu-bth {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin-left: auto;
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .menu-bth {
+    display: block;
+  }
+}
+
+.menu-btn-icon {
   display: block;
 }
 
-@media (min-width: 768px) {
-  .menu-bth {
-    display: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  .menu-bth {
-    display: none;
-  }
+.icon-close {
+  display: none;
 }
 
 .hero {
@@ -418,8 +482,6 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-bottom: 200px;
-  padding-top: 200px;
   text-align: center;
   max-width: 1600px;
   margin-left: auto;
@@ -428,15 +490,30 @@ button {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media (min-width: 1200px) {
+  .hero {
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
+}
+
 .hero__title {
   color: #ffffff;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   width: 696px;
   margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
 }
 
 .hero__button {
@@ -515,6 +592,7 @@ button {
 }
 
 .mission__title {
+  display: none;
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
@@ -523,46 +601,56 @@ button {
   margin-bottom: 50px;
 }
 
+@media (min-width: 1200px) {
+  .mission__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
+}
+
 .mission-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: none;
 }
 
-.mission-list__item {
-  position: relative;
-}
-
-.mission-list__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.mission-list__wraper {
-  display: block;
-  position: absolute;
-  background-color: rgba(47, 48, 58, 0.8);
-  height: 70px;
-  width: 370px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 110%);
-          transform: translate(-50%, 110%);
-}
-
-.mission-list__wraper h2 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
-  /* align-items: center; */
-  padding: 27px 82px 27px 83px;
+@media (min-width: 1200px) {
+  .mission-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mission-list__item {
+    position: relative;
+  }
+  .mission-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .mission-list__wraper {
+    display: block;
+    position: absolute;
+    background-color: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    width: 370px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 110%);
+            transform: translate(-50%, 110%);
+  }
+  .mission-list__wraper h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    /* align-items: center; */
+    padding: 27px 82px 27px 83px;
+  }
 }
 
 .team {

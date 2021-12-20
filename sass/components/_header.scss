@@ -18,6 +18,9 @@
   &__nav {
     display: flex;
     align-items: baseline;
+    @include mq(mobile-only) {
+      display: none;
+    }
   }
   &__list {
     display: flex;
@@ -38,24 +41,61 @@
 }
 
 .contact-list {
-  display: none;
-  @include mq(tablet) {
-    display: flex;
-    // align-items: center;
-    // margin-right: 84px;
+  margin-left: auto;
+  @include mq(mobile-only) {
+    display: none;
   }
+
   @include mq(desktop) {
     display: flex;
-    // margin-left: 50px;
+    align-items: center;
+  }
+  &__link {
+    @include mq(desktop) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+  &__icon {
+    fill: currentColor;
+    margin-right: 8px;
+
+    @include mq(desktop) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.icon-mail {
+  width: 14px;
+  height: 10px;
+  @include mq(desktop) {
+    width: 16px;
+    height: 12px;
+  }
+}
+.icon-tel {
+  width: 10px;
+  height: 14px;
+  @include mq(desktop) {
+    height: 16px;
   }
 }
 
 .menu-bth {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin-left: auto;
+  display: none;
+  @include mq(mobile-only) {
+    display: block;
+  }
+}
+
+.menu-btn-icon {
   display: block;
-  @include mq(tablet) {
-    display: none;
-  }
-  @include mq(desktop) {
-    display: none;
-  }
+}
+.icon-close {
+  display: none;
 }

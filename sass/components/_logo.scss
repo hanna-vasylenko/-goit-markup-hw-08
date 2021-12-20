@@ -2,19 +2,29 @@
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   margin-right: 93px;
-  @include mq(mobile) {
+  @include mq(tablet) {
     margin-right: 88px;
   }
   @include mq(desktop) {
     margin-right: 93px;
     font-size: 26px;
+    line-height: 1.19;
   }
 }
 
+@include mq(tablet) {
+  margin-right: 88px;
+}
+
+@include mq(desktop) {
+  margin-right: 93px;
+  font-size: 26px;
+  line-height: 1.19;
+}
 .logo--dark {
   color: var(--title-text-color);
 }
