@@ -1,8 +1,16 @@
 .header {
-  border: 1px solid #ececec;
-  border-left: none;
-  border-right: none;
-  border-top: none;
+  border-bottom: 1px solid #ececec;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include mq(tablet) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @include mq(desktop) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
   &__container {
     display: flex;
     align-items: baseline;
@@ -14,5 +22,40 @@
   &__list {
     display: flex;
     align-items: baseline;
+  }
+}
+
+.header-nav__list {
+  display: none;
+  @include mq(tablet) {
+    display: flex;
+  }
+  @include mq(desktop) {
+    display: flex;
+    align-items: baseline;
+    margin-right: 84px;
+  }
+}
+
+.contact-list {
+  display: none;
+  @include mq(tablet) {
+    display: flex;
+    // align-items: center;
+    // margin-right: 84px;
+  }
+  @include mq(desktop) {
+    display: flex;
+    // margin-left: 50px;
+  }
+}
+
+.menu-bth {
+  display: block;
+  @include mq(tablet) {
+    display: none;
+  }
+  @include mq(desktop) {
+    display: none;
   }
 }

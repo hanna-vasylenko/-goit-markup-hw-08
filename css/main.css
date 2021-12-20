@@ -21,6 +21,32 @@
   margin: -1px;
 }
 
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 body {
   --background-color: #e5e5e5;
   color: var(--primary-text-color);
@@ -49,14 +75,6 @@ img {
 
 button {
   cursor: pointer;
-}
-
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section {
@@ -164,6 +182,19 @@ button {
   line-height: 1.19;
   letter-spacing: 0.03em;
   margin-right: 93px;
+}
+
+@media (min-width: 400px) {
+  .logo {
+    margin-right: 88px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    font-size: 26px;
+  }
 }
 
 .logo--dark {
@@ -274,10 +305,23 @@ button {
 }
 
 .header {
-  border: 1px solid #ececec;
-  border-left: none;
-  border-right: none;
-  border-top: none;
+  border-bottom: 1px solid #ececec;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .header__container {
@@ -305,6 +349,66 @@ button {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+}
+
+.header-nav__list {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin-right: 84px;
+  }
+}
+
+.contact-list {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .contact-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.menu-bth {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu-bth {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-bth {
+    display: none;
+  }
 }
 
 .hero {

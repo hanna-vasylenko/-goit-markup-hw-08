@@ -6,6 +6,13 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   margin-right: 93px;
+  @include mq(mobile) {
+    margin-right: 88px;
+  }
+  @include mq(desktop) {
+    margin-right: 93px;
+    font-size: 26px;
+  }
 }
 
 .logo--dark {
