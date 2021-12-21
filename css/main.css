@@ -684,19 +684,40 @@ button {
 }
 
 .team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-right: -30px;
+  margin: bottom -30px;
+}
+
+@media (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -30px;
+  }
 }
 
 .team-list__item {
+  margin-bottom: 30px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list__item:not(:last-child) {
-  margin-right: 30px;
+@media (min-width: 768px) {
+  .team-list__item {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team-list__item {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
 }
 
 .team-list__subtitle {
@@ -750,6 +771,15 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+  .clients-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .clients-list__icon {
@@ -796,8 +826,30 @@ button {
   fill: var(--accent-color);
 }
 
-.clients-list__item:not(:last-child) {
-  margin-right: 30px;
+.clients-list__item {
+  width: calc(100 / 2 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .clients-list__item {
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .clients-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .clients-list__item__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .footer {
