@@ -1,10 +1,18 @@
 .hero {
   background-color: #2f303a;
+
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero/hero-bg.jpg);
+    url(../images/hero/hero-bg-sm.jpg);
+  @include mq(retina) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero-bg@2x-sm.jpg);
+  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -13,7 +21,34 @@
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include mq(tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero-bg-md.jpg);
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/hero-bg@2x-md.jpg);
+    }
+  }
   @include mq(desktop) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero-bg-lg.jpg);
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/hero-bg@2x-lg.jpg);
+    }
+
     padding-bottom: 200px;
     padding-top: 200px;
   }
