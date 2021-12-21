@@ -5,10 +5,91 @@
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  &-container {
+  &__container {
     display: flex;
+    flex-wrap: wrap;
+    @include mq(mobile-only) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mq(desktop) {
+      align-items: baseline;
+    }
     & p {
       color: #ffffff;
+    }
+  }
+  &__adress {
+    @include mq(mobile-only) {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    @include mq(tablet-only) {
+      margin-bottom: 60px;
+      margin-right: 165px;
+      margin-left: 61px;
+      text-align: center;
+    }
+    @include mq(desktop) {
+      margin-right: 70px;
+    }
+  }
+  &__social {
+    margin-bottom: 60px;
+    & h3 {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    &__item:not(:last-child) {
+      margin-right: 10px;
+    }
+    @include mq(mobile-only) {
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mq(tablet-only) {
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__join {
+    width: 100%;
+    text-align: center;
+    & h3 {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      // margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    @include mq(mobile-only) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mq(tablet-only) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mq(desktop) {
+      margin-left: auto;
+      width: 570px;
     }
   }
 }
@@ -36,38 +117,13 @@
   }
 }
 
-.social {
-  margin-left: 70px;
-  & h3 {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-top: 30px;
-    margin-bottom: 10px;
-  }
-  &__item:not(:last-child) {
-    margin-right: 10px;
-  }
-}
-
 .join-container {
   position: relative;
-  display: flex;
   align-items: center;
-  &__icon {
-    position: absolute;
-    right: 28px;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 10px;
-  }
+
   &__input {
     width: 358px;
     height: 50px;
-    margin-right: 12px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
@@ -76,11 +132,54 @@
     outline: none;
     padding-left: 16px;
     color: #ffffff;
+    @include mq(mobile-only) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    @include mq(tablet-only) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    @include mq(desktop) {
+      margin-right: 12px;
+      flex-grow: 1;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 67%;
+    left: 65%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-67%);
+    margin-left: 10px;
+    // @include mq(tablet) {
+    //   top: 45%;
+    //   left: 82%;
+    //   margin-left: 10px;
+  }
+  @include mq(mobile-only) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include mq(tablet-only) {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include mq(desktop) {
+    display: flex;
   }
 }
 
 .join-container__button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -94,6 +193,7 @@
   justify-content: center;
   border-radius: 4px;
   border: none;
+  // margin-top: 20px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -102,22 +202,5 @@
   &:focus {
     color: var(--accent-color);
     background-color: var(--title-text-color);
-  }
-}
-
-.join {
-  align-items: baseline;
-  margin-left: 93px;
-  width: 570px;
-  height: 86px;
-  & h3 {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-top: 30px;
-    margin-bottom: 10px;
   }
 }

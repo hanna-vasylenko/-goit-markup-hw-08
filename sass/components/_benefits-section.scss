@@ -30,14 +30,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 450px; //270 120
       height: 120px;
+
       @include mq(tablet) {
-        width: 354px;
+        // width: 354px;
         height: 120px;
       }
       @include mq(desktop) {
-        width: 270px;
+        // width: 270px;
         height: 120px;
       }
     }

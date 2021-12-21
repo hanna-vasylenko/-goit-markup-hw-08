@@ -67,9 +67,18 @@
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 
   &__item {
+    // margin-left: 30px;
+    // margin-bottom: 30px;
     width: 370px;
     margin: 15px;
     border-radius: 0px 0px 4px 4px;
@@ -82,6 +91,14 @@
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     }
+    // @include mq(tablet) {
+    //   width: calc(100% / 2 - 30px);
+    //   margin-left: 30px;
+    // }
+    // @include mq(desktop) {
+    //   width: calc(100% / 3 - 60px);
+    //  margin-left: 30px;
+    // }
   }
   &__subtitle {
     color: var(--title-text-color);
