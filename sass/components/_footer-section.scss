@@ -63,8 +63,6 @@
     }
   }
   &__join {
-    width: 100%;
-    text-align: center;
     & h3 {
       color: #ffffff;
       font-weight: 700;
@@ -88,6 +86,7 @@
       align-items: center;
     }
     @include mq(desktop) {
+      text-align: left;
       margin-left: auto;
       width: 570px;
     }
