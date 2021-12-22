@@ -1,6 +1,5 @@
 .hero {
   background-color: #2f303a;
-
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -48,9 +47,6 @@
         ),
         url(../images/hero/hero-bg@2x-lg.jpg);
     }
-
-    padding-bottom: 200px;
-    padding-top: 200px;
   }
 }
 
@@ -89,5 +85,14 @@
   &:focus {
     color: var(--accent-color);
     background-color: #ffffff;
+  }
+}
+
+.hero-section {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  @include mq(desktop) {
+    padding-bottom: 200px;
+    padding-top: 200px;
   }
 }
