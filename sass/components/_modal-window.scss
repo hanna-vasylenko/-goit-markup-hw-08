@@ -24,6 +24,21 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+  @include mq(mobile) {
+    padding: 40px;
+    width: 450px;
+    min-height: 609px;
+  }
+
+  @include mq(desktop) {
+    width: 528px;
+    min-height: 581px;
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
 }
 .modal__title {
   font-style: normal;
@@ -92,12 +107,16 @@
   display: flex;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.67;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .check-text::before {
@@ -120,7 +139,9 @@
 }
 .modal-policy {
   display: flex;
+  margin-bottom: 30px;
 }
+
 .input-wrap {
   position: relative;
 }
@@ -172,14 +193,19 @@
 .check-link {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.67;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .submit-btn {
+  align-self: center;
   display: block;
   font-weight: 700;
   font-size: 16px;
@@ -192,9 +218,6 @@
   background-color: var(--accent-color);
   padding: 10px 56px;
   min-width: 200px;
-  margin-top: 30px;
-  margin-left: 124px;
-  margin-right: 124px;
   justify-content: center;
   border-radius: 4px;
   border: none;

@@ -1,8 +1,19 @@
 .portfolio__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 56px;
+  margin-right: -8px;
+  margin-top: -15px;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+
+  @include mq(tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include mq(desktop) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 .portfolio__button {
   font-weight: 500;
@@ -25,8 +36,9 @@
   }
 }
 
-.portfolio__item:not(:last-child) {
+.portfolio__item {
   margin-right: 8px;
+  margin-top: 15px;
 }
 
 .card-thumb {

@@ -812,10 +812,10 @@
             />
             <button class="join-container__button button" type="submit">
               Подписаться
+              <svg class="join-container__icon" width="24" height="24">
+                <use href="./images/svg/icons.svg#icon-send"></use>
+              </svg>
             </button>
-            <svg class="join-container__icon" width="24" height="24">
-              <use href="./images/svg/icons.svg#icon-send"></use>
-            </svg>
           </div>
         </div>
       </div>
@@ -895,10 +895,12 @@
               name="policy"
               id="policy"
             />
-            <label class="check-text" for="policy"
-              >Соглашаюсь с рассылкой и принимаю&nbsp</label
-            >
-            <a class="check-link" href="">Условия договора</a>
+            <label class="check-text" for="policy">
+              <span>
+                Соглашаюсь с рассылкой и принимаю&nbsp
+                <a class="check-link" href="#">Условия договора</a></span
+              >
+            </label>
           </div>
 
           <button class="submit-btn" type="submit">Отправить</button>

@@ -117,7 +117,6 @@
 }
 
 .join-container {
-  position: relative;
   align-items: center;
 
   &__input {
@@ -146,17 +145,9 @@
   }
 
   &__icon {
-    position: absolute;
-    top: 67%;
-    left: 65%;
-    -webkit-transform: translate(-50%);
-    transform: translate(-67%);
     margin-left: 10px;
-    // @include mq(tablet) {
-    //   top: 45%;
-    //   left: 82%;
-    //   margin-left: 10px;
   }
+
   @include mq(mobile-only) {
     width: 100%;
     display: flex;
@@ -187,7 +178,7 @@
   text-align: center;
   color: #ffffff;
   background-color: var(--accent-color);
-  padding: 10px 56px 10px 36px;
+  padding: 10px 36px 10px 36px;
   min-width: 200px;
   justify-content: center;
   border-radius: 4px;

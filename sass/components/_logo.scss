@@ -14,7 +14,11 @@
     line-height: 1.19;
   }
 }
-
+.footer .logo {
+  @include mq(tablet) {
+    margin-right: 0;
+  }
+}
 .logo--dark {
   color: var(--title-text-color);
 }
