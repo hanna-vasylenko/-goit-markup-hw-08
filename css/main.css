@@ -878,6 +878,7 @@ button {
 
 .team-list {
   margin-bottom: -30px;
+  margin-left: -30px;
 }
 
 @media (min-width: 768px) {
@@ -1095,6 +1096,8 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media (max-width: 767.98px) {
@@ -1123,16 +1126,12 @@ button {
 
 @media (max-width: 767.98px) {
   .footer__adress {
-    margin-bottom: 60px;
     text-align: center;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .footer__adress {
-    margin-bottom: 60px;
-    margin-right: 165px;
-    margin-left: 61px;
     text-align: center;
   }
 }
