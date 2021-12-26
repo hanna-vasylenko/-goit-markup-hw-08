@@ -18,30 +18,27 @@
   @include mq(tablet) {
     display: none;
   }
-}
 
-.modal-menu.is-open {
-  visibility: visible;
-  pointer-events: all;
-  opacity: 1;
-  z-index: 1;
-}
-
-.modal-menu__list {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.175;
-  letter-spacing: 0.02em;
-}
-
-.modal-menu__item:not(last-child) {
-  margin-bottom: 32px;
-}
-
-.modal-menu__link {
-  color: #212121;
-  &--current {
-    color: var(--accent-color);
+  &.is-open {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+    z-index: 1;
+  }
+  &__list {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+  }
+  &__item:not(last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    color: #212121;
+    &--current {
+      color: var(--accent-color);
+    }
   }
 }
 

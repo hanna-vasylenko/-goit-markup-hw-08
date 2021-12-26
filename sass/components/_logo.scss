@@ -13,20 +13,18 @@
     font-size: 26px;
     line-height: 1.19;
   }
+  &--dark {
+    color: var(--title-text-color);
+  }
+  &--bright {
+    color: #ffffff;
+  }
+  &__accent {
+    color: var(--accent-color);
+  }
 }
 .footer .logo {
   @include mq(tablet) {
     margin-right: 0;
   }
-}
-.logo--dark {
-  color: var(--title-text-color);
-}
-
-.logo--bright {
-  color: #ffffff;
-}
-
-.logo__accent {
-  color: var(--accent-color);
 }

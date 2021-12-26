@@ -45,12 +45,11 @@
   @include mq(mobile-only) {
     display: block;
   }
-}
-
-.header-btn__icon {
-  display: block;
-  &--close {
-    display: none;
+  &__icon {
+    display: block;
+    &--close {
+      display: none;
+    }
   }
 }
 

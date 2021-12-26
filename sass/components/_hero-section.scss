@@ -48,21 +48,28 @@
         url(../images/hero/hero-bg@2x-lg.jpg);
     }
   }
-}
-
-.hero__title {
-  color: #ffffff;
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.62;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  max-width: 360px;
-  margin: 0 auto;
-  @include mq(desktop) {
-    font-size: 44px;
-    line-height: 1.36;
-    max-width: 696px;
+  &__title {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    max-width: 360px;
+    margin: 0 auto;
+    @include mq(desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+      max-width: 696px;
+    }
+  }
+  &-section {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    @include mq(desktop) {
+      padding-bottom: 200px;
+      padding-top: 200px;
+    }
   }
 }
 
@@ -85,14 +92,5 @@
   &:focus {
     color: var(--accent-color);
     background-color: #ffffff;
-  }
-}
-
-.hero-section {
-  padding-top: 118px;
-  padding-bottom: 118px;
-  @include mq(desktop) {
-    padding-bottom: 200px;
-    padding-top: 200px;
   }
 }
